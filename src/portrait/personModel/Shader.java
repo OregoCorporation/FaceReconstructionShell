@@ -4,11 +4,9 @@ public final class Shader {
 
     private boolean isReady;
 
+    private int program;
+
     public Shader(final String vertexShaderPath, final String fragmentShaderPath) {
-
-
-
-
         this.isReady = true;
         //catch...
         // else false...

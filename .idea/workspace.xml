@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b7169f-b245-455c-92ed-30b11c72d674" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/portrait/personModel/Shader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/StarKRE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/StarKRE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/genderType/GenderType.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/materials/Materials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/materials/Materials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/portrait/personModel/PersonPart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/PersonPart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/personModel/exceptions/HeadComponentsAreNotBindedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/exceptions/HeadComponentsAreNotBindedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/personModel/exceptions/NotLoadedBufferException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/exceptions/NotLoadedBufferException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/personModel/exceptions/NotLoadedMaterialsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/exceptions/NotLoadedMaterialsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/personModel/exceptions/ViolatedBindingSequenceOfPartsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/exceptions/ViolatedBindingSequenceOfPartsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/personModel/face/Face.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/face/Face.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/personModel/skull/Skull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/skull/Skull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/portrait/personModel/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/Shader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +21,8 @@
       <file leaf-file-name="HeadComposition.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1760">
-              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+            <state relative-caret-position="2295">
+              <caret line="135" column="40" lean-forward="true" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,24 +30,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/portrait/personModel/Shader.java">
+      <file leaf-file-name="BufferedImage.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="-1822">
+              <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Raster.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/image/Raster.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="1476" column="21" selection-start-line="1476" selection-start-column="21" selection-end-line="1476" selection-end-column="21" />
               <folding>
-                <element signature="e#205#206#0" expanded="true" />
-                <element signature="e#235#236#0" expanded="true" />
+                <element signature="e#62890#62891#0" expanded="true" />
+                <element signature="e#62921#62922#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Materials.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/portrait/materials/Materials.java">
+      <file leaf-file-name="Shader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/portrait/personModel/Shader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <folding>
+                <element signature="e#205#206#0" expanded="true" />
+                <element signature="e#235#236#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,23 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonPart.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PersonPart.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/portrait/personModel/PersonPart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/portrait/personModel/ModelLoader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="416">
+              <caret line="88" column="24" lean-forward="true" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,6 +143,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="StarKRE &lt;ardar.igor@mail.ru&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -170,14 +168,14 @@
         <option value="$PROJECT_DIR$/src/portrait/personModel/ModelLoader.java" />
         <option value="$PROJECT_DIR$/src/portrait/personModel/face/Face.java" />
         <option value="$PROJECT_DIR$/src/portrait/personModel/skull/Skull.java" />
-        <option value="$PROJECT_DIR$/src/portrait/personModel/PersonPart.java" />
-        <option value="$PROJECT_DIR$/src/portrait/personModel/Shader.java" />
-        <option value="$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java" />
         <option value="$PROJECT_DIR$/src/portrait/materials/Materials.java" />
         <option value="$PROJECT_DIR$/src/portrait/personModel/exceptions/HeadComponentsAreNotBindedException.java" />
         <option value="$PROJECT_DIR$/src/portrait/personModel/exceptions/NotLoadedBufferException.java" />
         <option value="$PROJECT_DIR$/src/portrait/personModel/exceptions/NotLoadedMaterialsException.java" />
         <option value="$PROJECT_DIR$/src/portrait/personModel/exceptions/ViolatedBindingSequenceOfPartsException.java" />
+        <option value="$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java" />
+        <option value="$PROJECT_DIR$/src/portrait/personModel/PersonPart.java" />
+        <option value="$PROJECT_DIR$/src/portrait/personModel/Shader.java" />
       </list>
     </option>
   </component>
@@ -230,46 +228,7 @@
               <item name="FaceReconstructionInterface" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="portrait" type="462c0819:PsiDirectoryNode" />
-              <item name="materials" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FaceReconstructionInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FaceReconstructionInterface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="portrait" type="462c0819:PsiDirectoryNode" />
               <item name="personModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FaceReconstructionInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FaceReconstructionInterface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="portrait" type="462c0819:PsiDirectoryNode" />
-              <item name="personModel" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FaceReconstructionInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FaceReconstructionInterface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="portrait" type="462c0819:PsiDirectoryNode" />
-              <item name="personModel" type="462c0819:PsiDirectoryNode" />
-              <item name="face" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FaceReconstructionInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FaceReconstructionInterface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="portrait" type="462c0819:PsiDirectoryNode" />
-              <item name="personModel" type="462c0819:PsiDirectoryNode" />
-              <item name="hairStyle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FaceReconstructionInterface" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FaceReconstructionInterface" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="portrait" type="462c0819:PsiDirectoryNode" />
-              <item name="personModel" type="462c0819:PsiDirectoryNode" />
-              <item name="skull" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,12 +312,20 @@
       <option name="presentableId" value="Default" />
       <updated>1523796963447</updated>
       <workItem from="1523796966740" duration="8179000" />
-      <workItem from="1523805495979" duration="3565000" />
+      <workItem from="1523805495979" duration="7699000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;Added documentation&quot;">
+      <created>1523809322752</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1523809322752</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11744000" />
+    <option name="totallyTimeSpent" value="15878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -398,6 +365,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Added documentation&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Added documentation&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java">
@@ -573,27 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/portrait/personModel/Shader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1760">
-          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/portrait/personModel/exceptions/HeadComponentsAreNotBindedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -637,12 +587,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/portrait/personModel/PersonPart.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/image/Raster.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        <state relative-caret-position="225">
+          <caret line="1476" column="21" selection-start-line="1476" selection-start-column="21" selection-end-line="1476" selection-end-column="21" />
+          <folding>
+            <element signature="e#62890#62891#0" expanded="true" />
+            <element signature="e#62921#62922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1822">
+          <caret line="67" column="13" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" column="40" lean-forward="true" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/portrait/personModel/PersonPart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="88" column="24" lean-forward="true" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/portrait/personModel/Shader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
           </folding>
         </state>
       </provider>
