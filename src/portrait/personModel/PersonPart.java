@@ -6,11 +6,24 @@ import portrait.personModel.exceptions.NotLoadedMaterialsException;
 
 import java.nio.Buffer;
 
+/**
+ * Класс PersonPart
+ */
+
 public abstract class PersonPart {
 
     private boolean isBinded;
 
     private ModelLoader modelLoader;
+
+    /**
+     * @param path
+     *        указывает путь к .obj файлу
+     *
+     * В конструкторе происходит инициализация загрузчика 3D модели ModelLoader,
+     * затем сразу же вызывается modelLoader.load(), что говорит нам о том,
+     * что началась загрузка всех нужных нам файлов
+     */
 
     public PersonPart(final String path){
         final ModelLoader modelLoader = new ModelLoader(path);
@@ -52,7 +65,7 @@ public abstract class PersonPart {
         return isBinded;
     }
 
-    public final void setBinded(final boolean isBinded) {
-        this.isBinded = isBinded;
+    public final void setBinded(final boolean binded) {
+        this.isBinded = binded;
     }
 }

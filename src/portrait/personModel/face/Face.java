@@ -4,7 +4,7 @@ import portrait.personModel.PersonPart;
 
 public final class Face extends PersonPart {
 
-    public Face(String path) {
+    public Face(final String path) {
         super(path);
     }
 
