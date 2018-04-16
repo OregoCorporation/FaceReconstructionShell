@@ -7,6 +7,7 @@ import portrait.personModel.face.Face;
 import portrait.personModel.hairStyle.HairStyle;
 import portrait.personModel.skull.Skull;
 
+import java.io.InputStream;
 import java.nio.Buffer;
 import java.util.logging.Logger;
 
@@ -52,19 +53,19 @@ public final class HeadComposition {
     private Buffer elementBufferObject;
 
     /**
-     * @param skullPath
-     *        указывает путь к .obj файлу черепа человека
-     * @param facePath
-     *        указывает путь к .obj файлу лица человека
-     * @param hairStylePath
-     *        указывает путь к .obj файлу лица человека
+     * @param skullIS
+     *        InputStream .obj файла черепа человека
+     * @param faceIS
+     *        InputStream .obj файла лица человека
+     * @param hairStyleIS
+     *        InputStream .obj файла лица человека
      * В конструкторе происходит загрузка вершинного и фрагментного шейдеров, а также всех трёх частей:
      */
 
-    public HeadComposition(final String skullPath, final String facePath, final String hairStylePath) {
-        this.skull = new Skull(skullPath);
-        this.face = new Face(facePath);
-        this.currentHairStyle = new HairStyle(hairStylePath);
+    public HeadComposition(final InputStream skullIS, final InputStream faceIS, final InputStream hairStyleIS) {
+        this.skull = new Skull(skullIS);
+        this.face = new Face(faceIS);
+        this.currentHairStyle = new HairStyle(hairStyleIS);
         //Загружаем шейдеры:
         this.shader = new Shader("", "");
     }
@@ -94,7 +95,7 @@ public final class HeadComposition {
 
     public final void bindFace() throws ViolatedBindingSequenceOfPartsException {
         if (skull.isBinded() && !currentHairStyle.isBinded()) {
-            //make binding
+            //TODO binding
 
             this.face.setBinded(true);
         } else {
@@ -136,7 +137,7 @@ public final class HeadComposition {
         final boolean isHairStyleReady = currentHairStyle.isBinded();
         final boolean areShadersReady = shader.isReady();
         if (isSkullReady && isFaceReady && isHairStyleReady && areShadersReady) {
-            //draw via OpenGL...
+            //TODO draw via OpenGL...
         } else {
             throw new HeadComponentsAreNotBindedException();
         }

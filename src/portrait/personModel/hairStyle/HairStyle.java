@@ -2,10 +2,12 @@ package portrait.personModel.hairStyle;
 
 import portrait.personModel.PersonPart;
 
+import java.io.InputStream;
+
 public final class HairStyle extends PersonPart {
 
-    public HairStyle(final String path) {
-        super(path);
+    public HairStyle(final InputStream inputStream) {
+        super(inputStream);
     }
 
     @Override

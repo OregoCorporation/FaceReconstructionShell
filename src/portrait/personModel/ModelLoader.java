@@ -1,12 +1,12 @@
 package portrait.personModel;
-
 import portrait.materials.Materials;
 
+import java.io.InputStream;
 import java.nio.Buffer;
 
 final class ModelLoader {
 
-    private final String path;
+    private final InputStream is;
 
     private boolean isLoaded;
 
@@ -16,16 +16,15 @@ final class ModelLoader {
 
     private Materials materials;
 
-    ModelLoader(final String path){
-        this.path = path;
+
+    ModelLoader(final InputStream is){
+        this.is = is;
         this.isLoaded = false;
     }
 
-    final void load(){
-        if (!isLoaded){
-            //loading...
-            //...
-            //...complete
+    final void load() {
+        if (!isLoaded) {
+
             this.isLoaded = true;
         }
     }
@@ -38,7 +37,8 @@ final class ModelLoader {
         return isLoaded ? elementBufferObject : null;
     }
 
-    final Materials getMaterials(){
+    final Materials getMaterials() {
         return isLoaded ? materials : null;
     }
+
 }

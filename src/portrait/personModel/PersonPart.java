@@ -4,6 +4,7 @@ import portrait.materials.Materials;
 import portrait.personModel.exceptions.NotLoadedBufferException;
 import portrait.personModel.exceptions.NotLoadedMaterialsException;
 
+import java.io.InputStream;
 import java.nio.Buffer;
 
 /**
@@ -17,16 +18,16 @@ public abstract class PersonPart {
     private ModelLoader modelLoader;
 
     /**
-     * @param path
-     *        указывает путь к .obj файлу
+     * @param inputStream
+     *        InputStream .obj файла
      *
      * В конструкторе происходит инициализация загрузчика 3D модели ModelLoader,
      * затем сразу же вызывается modelLoader.load(), что говорит нам о том,
      * что началась загрузка всех нужных нам файлов.
      */
 
-    public PersonPart(final String path){
-        final ModelLoader modelLoader = new ModelLoader(path);
+    public PersonPart(final InputStream inputStream){
+        final ModelLoader modelLoader = new ModelLoader(inputStream);
         modelLoader.load();
         this.modelLoader = modelLoader;
         this.isBinded = false;
@@ -91,7 +92,7 @@ public abstract class PersonPart {
     }
 
     /**
-     * @return устаавливает готовность буферов
+     * @return устанавливает готовность буферов
      */
 
     public final void setBinded(final boolean binded) {
