@@ -7,6 +7,7 @@ import portrait.personModel.face.Face;
 import portrait.personModel.hairStyle.HairStyle;
 import portrait.personModel.skull.Skull;
 
+import java.io.FileNotFoundException;
 import java.nio.Buffer;
 import java.util.logging.Logger;
 
@@ -61,7 +62,8 @@ public final class HeadComposition {
      * В конструкторе происходит загрузка вершинного и фрагментного шейдеров, а также всех трёх частей:
      */
 
-    public HeadComposition(final String skullPath, final String facePath, final String hairStylePath) {
+    public HeadComposition(final String skullPath, final String facePath, final String hairStylePath)
+            throws FileNotFoundException {
         this.skull = new Skull(skullPath);
         this.face = new Face(facePath);
         this.currentHairStyle = new HairStyle(hairStylePath);
