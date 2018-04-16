@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b7169f-b245-455c-92ed-30b11c72d674" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test/shaderProgramTest/ShaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/shaderProgramTest/shaderFiles/fragment.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/shaderProgramTest/shaderFiles/vertex.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceReconstructionInterface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FaceReconstructionInterface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/portrait/personModel/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/portrait/personModel/Shader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,10 +14,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HeadComposition.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HeadComposition.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="-2157">
               <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -32,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShaderTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShaderTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/shaderProgramTest/ShaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="143">
@@ -120,6 +114,11 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -337,7 +336,7 @@
       <updated>1523796963447</updated>
       <workItem from="1523796966740" duration="8179000" />
       <workItem from="1523805495979" duration="7797000" />
-      <workItem from="1523897994226" duration="10145000" />
+      <workItem from="1523897994226" duration="10259000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Added documentation&quot;">
       <created>1523809322752</created>
@@ -353,13 +352,17 @@
       <option name="project" value="LOCAL" />
       <updated>1523820136008</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;Added shader loading &amp; documentation&quot;">
+      <created>1523909051143</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523909051143</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SuperStreamTest_testStream - 2018.04.16 at 21h 19m 15s.xml">
-      <configuration name="SuperStreamTest.testStream" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SuperStreamTest_testStream - 2018.04.16 at 21h 21m 00s.xml">
       <configuration name="SuperStreamTest.testStream" configurationId="JUnit" />
     </history-entry>
@@ -387,9 +390,12 @@
     <history-entry file="ShaderTest_loadingTest - 2018.04.16 at 22h 56m 59s.xml">
       <configuration name="ShaderTest.loadingTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ShaderTest_loadingTest - 2018.04.16 at 23h 03m 26s.xml">
+      <configuration name="ShaderTest.loadingTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26121000" />
+    <option name="totallyTimeSpent" value="26235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -463,7 +469,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Added documentation&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Added documentation&quot;" />
+    <MESSAGE value="&quot;Added shader loading &amp; documentation&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Added shader loading &amp; documentation&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java">
@@ -801,16 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/shaderProgramTest/shaderFiles/fragment.shader">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -858,6 +860,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/portrait/headComposition/HeadComposition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2157">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
