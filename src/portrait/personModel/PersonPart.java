@@ -6,6 +6,8 @@ import portrait.personModel.exceptions.NotLoadedMaterialsException;
 
 import java.io.InputStream;
 import java.nio.Buffer;
+import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
 
 /**
  * Класс PersonPart
@@ -38,8 +40,8 @@ public abstract class PersonPart {
      * @throws NotLoadedBufferException
      */
 
-    public final Buffer getVertexBufferObject() throws NotLoadedBufferException{
-        final Buffer buffer = modelLoader.getVertexBufferObject();
+    public final FloatBuffer getVertexBufferObject() throws NotLoadedBufferException{
+        final FloatBuffer buffer = modelLoader.getVertexBufferObject();
         if (buffer != null){
             return buffer;
         } else {
@@ -59,8 +61,8 @@ public abstract class PersonPart {
      * @throws NotLoadedBufferException
      */
 
-    public final Buffer getElementBufferObject() throws NotLoadedBufferException{
-        final Buffer buffer = modelLoader.getElementBufferObject();
+    public final IntBuffer getElementBufferObject() throws NotLoadedBufferException{
+        final IntBuffer buffer = modelLoader.getElementBufferObject();
         if (buffer != null){
             return buffer;
         } else {
@@ -97,5 +99,14 @@ public abstract class PersonPart {
 
     public final void setBinded(final boolean binded) {
         this.isBinded = binded;
+    }
+
+
+    public final int getVertexBufferSize(){
+        return modelLoader.getVertexBufferSize();
+    }
+
+    public final int getElementBufferSize(){
+        return modelLoader.getElementBufferSize();
     }
 }

@@ -6,4 +6,8 @@ package portrait.materials;
  */
 
 public final class Materials {
+    public Materials(String line){
+
+    }
+
 }

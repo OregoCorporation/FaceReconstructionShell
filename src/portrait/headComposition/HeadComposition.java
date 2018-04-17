@@ -2,18 +2,19 @@ package portrait.headComposition;
 
 import portrait.personModel.Shader;
 import portrait.personModel.exceptions.HeadComponentsAreNotBindedException;
+import portrait.personModel.exceptions.NotLoadedBufferException;
 import portrait.personModel.exceptions.ViolatedBindingSequenceOfPartsException;
 import portrait.personModel.face.Face;
 import portrait.personModel.hairStyle.HairStyle;
 import portrait.personModel.skull.Skull;
 
 import java.io.InputStream;
-import java.nio.Buffer;
+import java.nio.*;
 import java.util.logging.Logger;
 
 /**
  * @author Ilya Dolgushev && Igor Gulkin, 15.04.2018
- *
+ * <p>
  * Класс HeadComposition является главным классом приложения,
  * поскольку он полностью отображает 3D оболочку Вашего лица на экране.
  * При построении лица HeadComposition опирается на библиотеку OpenGL,
@@ -42,7 +43,7 @@ public final class HeadComposition {
      * Таким образом, сначала у нас идут вершины черепа, затем лица.
      */
 
-    private Buffer vertexBufferObject;
+    private FloatBuffer vertexBufferObject;
 
     /**
      * Второй буффер хранит в себе полигоны вершин.
@@ -50,32 +51,64 @@ public final class HeadComposition {
      * то мы будем хранить номера в списке трех вершин соответственно:
      */
 
-    private Buffer elementBufferObject;
+    private IntBuffer elementBufferObject;
 
     /**
-     * @param skullIS
-     *        InputStream .obj файла черепа человека
-     * @param faceIS
-     *        InputStream .obj файла лица человека
-     * @param hairStyleIS
-     *        InputStream .obj файла лица человека
-     * В конструкторе происходит загрузка вершинного и фрагментного шейдеров, а также всех трёх частей:
+     * @param skullIS     InputStream .obj файла черепа человека
+     * @param faceIS      InputStream .obj файла лица человека
+     * @param hairStyleIS InputStream .obj файла лица человека
+     *                    В конструкторе происходит загрузка вершинного и фрагментного шейдеров, а также всех трёх частей:
      */
 
     public HeadComposition(final InputStream skullIS, final InputStream faceIS, final InputStream hairStyleIS) {
         this.skull = new Skull(skullIS);
         this.face = new Face(faceIS);
         this.currentHairStyle = new HairStyle(hairStyleIS);
+        //Неявно инциализируем буферы:
+        this.vertexBufferObject = createNativeByteBuffer(face.getVertexBufferSize()
+                + skull.getVertexBufferSize()).asFloatBuffer();
+        this.elementBufferObject = createNativeByteBuffer(face.getElementBufferSize()
+                + skull.getElementBufferSize()).asIntBuffer();
         //Загружаем шейдеры:
         this.shader = new Shader("", "");
+        try {
+            this.fillBuffers();
+        } catch (final NotLoadedBufferException e) {
+            LOG.info("Неудалось создать буфферы головы");
+        }
+    }
+
+    private void fillBuffers()
+            throws NotLoadedBufferException {
+        for (int i = 0; i < face.getElementBufferSize(); i++) {
+            if (i < face.getVertexBufferSize()) {
+                vertexBufferObject.put(face.getVertexBufferObject().get(i));
+            }
+            elementBufferObject.put(face.getElementBufferObject().get(i));
+        }
+        for (int i = 0; i < skull.getElementBufferSize(); i++) {
+            if (i < skull.getVertexBufferSize()){
+                vertexBufferObject.put(skull.getVertexBufferObject().get(i));
+            }
+            elementBufferObject.put(skull.getElementBufferObject().get(i) + face.getElementBufferSize());
+        }
+    }
+
+    /**
+     *@author Ilya Dolgushev 17.04.18
+     */
+
+    private ByteBuffer createNativeByteBuffer(int length) {
+        ByteBuffer bb = ByteBuffer.allocateDirect(length);
+        bb.order(ByteOrder.nativeOrder());
+        return bb;
     }
 
     /**
      * bindSkull() - привязывает череп к голове.
-     * @throws ViolatedBindingSequenceOfPartsException
      *
-     * Поскольку мы хотим чтобы в первую очередь буфферы хранили координаты черепа,
-     * Мы должны убедиться, что другие части не храняться в буфферах.
+     * @throws ViolatedBindingSequenceOfPartsException Поскольку мы хотим чтобы в первую очередь буфферы хранили координаты черепа,
+     *                                                 Мы должны убедиться, что другие части не храняться в буфферах.
      */
 
     public final void bindSkull() throws ViolatedBindingSequenceOfPartsException {
@@ -87,10 +120,9 @@ public final class HeadComposition {
 
     /**
      * bindFace() - привязывает лицо к голове.
-     * @throws ViolatedBindingSequenceOfPartsException
      *
-     * Дальше, во вторую очередь буфферы должны хранить координаты лица,
-     * Мы должны убедиться, что череп загружен, а прическа нет.
+     * @throws ViolatedBindingSequenceOfPartsException Дальше, во вторую очередь буфферы должны хранить координаты лица,
+     *                                                 Мы должны убедиться, что череп загружен, а прическа нет.
      */
 
     public final void bindFace() throws ViolatedBindingSequenceOfPartsException {
@@ -105,13 +137,12 @@ public final class HeadComposition {
 
     /**
      * bindHairStyle() - привязывает прическу к голове.
-     * @throws ViolatedBindingSequenceOfPartsException
      *
-     * Кладем прическу, проверив, что череп и лицо загруженно соответственно.
+     * @throws ViolatedBindingSequenceOfPartsException Кладем прическу, проверив, что череп и лицо загруженно соответственно.
      */
 
     public final void bindHairStyle() throws ViolatedBindingSequenceOfPartsException {
-        if (skull.isBinded() && face.isBinded()){
+        if (skull.isBinded() && face.isBinded()) {
 
 
             this.currentHairStyle.setBinded(true);
@@ -123,12 +154,11 @@ public final class HeadComposition {
 
     /**
      * draw() - отрисовывает голову на экране.
-     * @throws HeadComponentsAreNotBindedException
      *
-     * Когда у нас все части загружены в правильном порядке и шейдеры включены,
-     * то можно приступить к самой вкусной части - отрисовке головы.
-     * Мы здесь непосредственно работаем с OpenGL:
-     * передаем ему буффер вершин vertexBufferObject и буффер полигонов elementBufferObject.
+     * @throws HeadComponentsAreNotBindedException Когда у нас все части загружены в правильном порядке и шейдеры включены,
+     *                                             то можно приступить к самой вкусной части - отрисовке головы.
+     *                                             Мы здесь непосредственно работаем с OpenGL:
+     *                                             передаем ему буффер вершин vertexBufferObject и буффер полигонов elementBufferObject.
      */
 
     public final void draw() throws HeadComponentsAreNotBindedException {
@@ -145,7 +175,7 @@ public final class HeadComposition {
 
     /**
      * setCurrentHairStyle() - меняет прическу.
-     *
+     * <p>
      * Перед сменой прически отрисовка OpenGL останавливается, и прическа меняется,
      * после чего снова включится метод отрисовки, то есть вызывается метод draw().
      */
